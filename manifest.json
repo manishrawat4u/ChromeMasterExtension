@@ -1,0 +1,58 @@
+{
+  "manifest_version": 3,
+  "name": "Master Extension",
+  "description": "This is the description of the Master Extension",
+  "version": "1.0",
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html",
+    "default_title": "Master Extension Title"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://msongs.apphb.com/*",
+        "https://msongs.apphb.com/*"
+      ],
+      "js": [
+        "msongs.js"
+      ]
+    },
+    {
+      "matches": [
+        "http://index-of.org/*",
+        "https://movieeater.com/*"
+      ],
+      "js": [
+        "indexof.js"
+      ]
+    },
+    {
+      "matches": [
+        "http://www.savemoneyindia.com/*"
+      ],
+      "js": [
+        "savemoneyindia.js"
+      ]
+      //"run_at":"document_start"
+    }, 
+    {
+      "matches": [
+        "http://480mkv.com/*",
+        "http://480mkv.download/*"
+      ],
+      "js": [
+        "480mkv.js"
+      ]
+    }
+  ],
+  "background": {
+    // "scripts": ["background.js"]
+  },
+  "permissions": [
+    "activeTab",
+    "debugger"
+    // "https://ajax.googleapis.com/"
+    // "http://msongs.apphb.com/"
+  ]
+}
